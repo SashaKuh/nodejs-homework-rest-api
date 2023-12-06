@@ -1,6 +1,6 @@
 import { HttpError } from '../helpers/HttpError.js';
 
-export const isEmptyBody = async (req, res, next) => {
+const isEmptyBody = async (req, res, next) => {
     const keys = Object.keys(req.body);
 
     if (keys.length === 0) {
@@ -13,3 +13,5 @@ export const isEmptyBody = async (req, res, next) => {
     }
     next()
 }
+
+export default isEmptyBody
